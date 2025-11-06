@@ -1,0 +1,251 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --tm-fundo: #FFE8D3;
+    --tm-fundo2: #391C01;
+    --tm-fundo3: #FAC18D;
+    --txt-default: #222123;
+
+    --tm-fundoOP: #fac28dc8;
+
+    --color-fundo1: #C37E3E;
+    --color-fundo2: #FFCE4E;
+    --color-fundo3: #7F3B2D;
+    --color-fundo4: #5E2A14;
+
+    --font: "Roboto Condensed", sans-serif/
+    
+}
+
+
+
+/* Configuração global */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--tm-fundo); /* define um fundo padrão */
+  color: #222; /* cor de texto padrão */
+  line-height: 1.5; /* melhora a leitura */
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--tm-fundo2);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Parágrafos */
+p {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--txt-default);
+  font-size: 1.2rem;
+}
+
+/* Botoes */
+.btn-1 {
+  border: none;
+  background: white;
+  color: var(--text-color);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-1:hover {
+  background: var(--color-fundo2);
+  transform: scale(1.05);
+}
+
+.btn-2 {
+  border: none;
+  background: var(--color-fundo3);
+  color: var(--tm-fundo);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.btn-2:hover {
+  background: var(--color-fundo2);
+  transform: scale(1.05);
+}
+
+.btn-3 {
+  border: none;
+  background: var(--color-fundo3);
+  color: var(--tm-fundo);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.btn-3:hover {
+  background: var(--color-fundo2);
+  transform: scale(1.05);
+}
+/*Caixa de texto*/
+.txt-caixa {
+    border: 1px solid var(--tm-fundo);
+    padding: 10px 30px;
+    background-color: var(--color-fundo1);
+    color: var(--tm-fundo);
+    transform: rotate(-5deg);
+}
+
+.txt-caixa2 {
+    border: 1px solid var(--tm-fundo2);
+    padding: 10px 20px;
+    background-color: var(--color-fundo2);
+    color: var(--tm-fundo2);
+    transform: rotate(5deg);
+    font-size: 2.3rem;
+}
+
+/* Header principal */
+.header {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+/* Camada borrada */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--tm-fundoOP);
+  filter: blur(5px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Camada de escurecimento */
+.header .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Garante que o conteúdo fique acima das camadas */
+.header > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Barra superior fixa */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  z-index: 10;
+  height: 80px; /* define altura fixa */
+}
+
+/* Adiciona espaço abaixo da navbar no conteúdo */
+.header .content {
+  margin-top: 80px; /* igual à altura da navbar */
+}
+
+/* Logo */
+.top-nav .img-logo img {
+  width: 140px;
+  height: auto;
+}
+
+/* Conteúdo do header */
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.text-header {
+  margin-top: 50px;
+}
+
+.imgCll {
+    margin: 0 auto;
+}
+
+.imgCll img {
+  width: 400px;
+}
+
+
+/*Mais informações*/
+.mais-info {
+    min-height: 100vh;
+    height: auto;
+    background-color: var(--color-fundo4);
+    color: var(--tm-fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.mais-info h2 {
+    color: var(--tm-fundo);
+}
+
+.mais-info p {
+    color: var(--tm-fundo);
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+
+

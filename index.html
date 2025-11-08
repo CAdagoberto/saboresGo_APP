@@ -31,7 +31,7 @@
           <strong>sem mensalidade</strong>, prático e feito para quem quer vender mais sem depender de aplicativos caros.
         </p>
 
-        <button class="btn-2">
+        <button class="btn-3">
           Começar agora
         </button>
       </div>
@@ -55,11 +55,109 @@
       e acompanhe tudo em tempo real — sem taxas escondidas e sem mensalidades.
     </p>
 
-    <button class="btn-3">saiba mais</button>
+    <button class="btn-2">saiba mais</button>
   </section>
   <!-- Fim Mais informações -->
 
+  <section class="vantagens">
+    <div class="headerVantagem">
+      <h2>Vantagens</h2>
+      <h3 class="txt-caixa">de usar</h3>
+      <img src="assets/img/logo.png" alt="">
+    </div>
 
+    <div class="cards-vantagem">
+      <div class="card" style="">
+        <img src="assets/img/cell.png" alt="">
+        <div class="body-card">
+          <span>Texto 1</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/cell.png" alt="">
+        <div class="body-card">
+          <span>Texto 1</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/cell.png" alt="">
+        <div class="body-card">
+          <span>Texto 1</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/cell.png" alt="">
+        <div class="body-card">
+          <span>Texto 1</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/cell.png" alt="">
+        <div class="body-card">
+          <span>Texto 1</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/cell.png" alt="">
+        <div class="body-card">
+          <span>Texto 1</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="mini-nav">
+      <button class="btn-3">Faça parte</button>
+    </div>
+  </section>
+
+  <section class="info" style="background-image: url(assets/img/fundoCell.png);">
+
+    <div class="content-info">
+      <div class="info-txt">
+        <h2>INFORMAÇÕES</h2>
+        <h3 class="txt-caixa">DO SISTEMA</h3>
+
+        <p>
+          Um sistema de pedidos fácil e rápido para oferecer para seus clientes.
+        </p>
+      </div>
+      <div class="info-img">
+        <img src="assets/img/sistem.png" alt="">
+        <div class="taxas">
+          <div class="tx-caixa">
+            <p>Taxas <br> Por venda</p>
+            <h4>4.5% + R$ 0.60</h4>
+          </div>
+          <div class="tx-caixa">
+            <p>Sem <br>taxa de</p>
+            <h4>Mensalidade</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const container = document.querySelector('.cards-vantagem');
+
+    container.addEventListener('wheel', (e) => {
+      const isAtTop = container.scrollTop === 0;
+      const isAtBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
+
+      if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+        e.preventDefault();
+        window.scrollBy(0, e.deltaY); // passa o scroll pra página
+      }
+    });
+
+  </script>
 </body>
 
 </html>

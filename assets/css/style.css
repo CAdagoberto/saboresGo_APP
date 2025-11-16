@@ -126,6 +126,27 @@ p {
   transform: scale(1.05);
   color: var(--color-fundo4);
 }
+
+.btn-4 {
+  border: none;
+  background: var(--color-fundo3);
+  color: var(--tm-fundo);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  
+}
+
+.btn-4:hover {
+  background: var(--color-fundo1);
+  transform: scale(1.05);
+  color: var(--tm-fundo2);
+}
 /*Caixa de texto*/
 .txt-caixa {
     border: 1px solid var(--tm-fundo);
@@ -144,10 +165,31 @@ p {
     background-color: var(--color-fundo2);
     color: var(--tm-fundo2);
     transform: rotate(5deg);
-    font-size: 2.3rem;
+    
     text-align: center;
      z-index: 1;
      margin-top: -5px;
+}
+
+.txt-caixa3 {
+    border: 1px solid var(--tm-fundo);
+    padding: 10px 30px;
+    background-color: var(--tm-fundo);
+    color: var(--color-fundo4);
+    text-align: center;
+    z-index: 1;
+    margin-top: -5px;
+}
+
+.txt-caixa4 {
+    border: 1px solid var(--tm-fundo);
+    padding: 10px 30px;
+    background-color: var(--color-fundo3);
+    color: var(--tm-fundo);
+    text-align: center;
+    z-index: 1;
+    margin-top: -5px;
+    transform: rotate(-2deg);
 }
 
 /* Header principal */
@@ -436,7 +478,7 @@ p {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
   width: 85%;
   max-width: 400px;
   height: 100px;
@@ -464,15 +506,165 @@ p {
 }
 
 .info-img .taxas .tx-caixa p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-bottom: 4px;
   color: var(--tm-cinza);
 }
 
 .info-img .taxas .tx-caixa h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-fundo3);
+}
+
+.barra {
+  height: 100%;
+  width: 1px;
+  background-color: var(--color-fundo4);
+  margin: 0;
+}
+
+/* More Info Section */
+.m-info {
+  height: 100vh;
+  background-color: var(--txt-default);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-info p {
+  color: var(--tm-fundo);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.m-info .txt-caixa2 {
+  transform: rotate(2deg);
+}
+
+.m-info button {
+  margin-top: 50px;
+}
+
+/*Footer*/
+
+/* ===== FOOTER GERAL ===== */
+.footer {
+  background-color: var(--tm-fundo);
+  color: var(--tm-cinza);
+  padding: 60px 20px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===== CONTAINER ===== */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== LOGO E TEXTO ===== */
+.footer-info {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-info p {
+
+  line-height: 1.5;
+}
+
+/* ===== LINKS ===== */
+.footer-links {
+  flex: 1 1 150px;
+}
+
+.footer-links h4,
+.footer-contato h4 {
+  color: var(--color-fundo3);
+  margin-bottom: 10px;
+
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 6px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: var(--tm-cinza);
+  
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: var(--color-fundo3);
+}
+
+/* ===== CONTATO ===== */
+.footer-contato p {
+ 
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-contato i {
+  color: var(--color-fundo3);
+}
+
+/* ===== RODAPÉ INFERIOR ===== */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 15px;
+  font-size: 0.8rem;
+  color: var(--tm-cinza);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-links,
+  .footer-contato {
+    max-width: 100%;
+  }
+
+  .footer-links ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .footer-links ul {
+    margin-top: 10px;
+  }
 }
 
 

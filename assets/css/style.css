@@ -176,8 +176,8 @@ p {
 }
 
 @keyframes expandir {
-  from { width: 110px; }
-  to   { width: var(--largura-final); }
+  from { width: 110px; opacity: 0; }
+  to   { width: var(--largura-final); opacity: 100%; }
 }
 
 

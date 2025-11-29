@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SaboresGo | Pagina Inicial</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
 
   <!--Header Inicial-->
-  <section class="header" style="background-image: url(./assets/img/imagemPrincipalCell.png);">
+  <section class="header" >
     <div class="top-nav">
       <div class="img-logo">
         <img src="assets/img/logo.png" alt="Logo Cardápio Online">
@@ -23,7 +24,9 @@
 
     <div class="content">
       <h1>Seu cardápio online em minutos</h1>
-      <h2 class="txt-caixa">Sem mensalidade. Sem complicação.</h2>
+      <div>
+        <h2 class="txt-caixa">Sem mensalidade e sem complicação</h2>
+      </div>
 
       <div class="text-header">
         <p>
@@ -31,7 +34,7 @@
           <strong>sem mensalidade</strong>, prático e feito para quem quer vender mais sem depender de aplicativos caros.
         </p>
 
-        <button class="btn-3">
+        <button class="btn-2">
           Começar agora
         </button>
       </div>
@@ -45,10 +48,12 @@
 
   <!-- Mais informações -->
   <section class="mais-info">
-    <h2>Crie seu cardápio online sem pagar mensalidade.
-    </h2>
-    <h3 class="txt-caixa2">É AQUI!</h3>
-    <h2>Você só paga a taxa padrão do meio de pagamento quando vender.</h2>
+    <h2 class="titulo-animado">Crie seu cardápio online sem pagar mensalidade.</h2>
+    <div>
+      <h3 class="txt-caixa2">É AQUI!</h3>
+    </div>
+    <h2 class="titulo-animado">Você só paga a taxa padrão do meio de pagamento quando vender.</h2>
+
     <p>
       Crie e personalize seu cardápio digital em poucos minutos.
       Receba pedidos direto do seu site, aceite pagamentos via PIX ou cartão
@@ -62,7 +67,9 @@
   <section class="vantagens">
     <div class="headerVantagem">
       <h2>Vantagens</h2>
-      <h3 class="txt-caixa">de usar</h3>
+      <div>
+        <h2 class="txt-caixa">de usar</h2>
+      </div>
       <img src="assets/img/logo.png" alt="">
     </div>
 
@@ -95,34 +102,22 @@
         </div>
       </div>
 
-      <div class="card">
-        <img src="assets/img/cell.png" alt="">
-        <div class="body-card">
-          <span>Texto 1</span>
-        </div>
-      </div>
 
-      <div class="card">
-        <img src="assets/img/cell.png" alt="">
-        <div class="body-card">
-          <span>Texto 1</span>
-        </div>
-      </div>
 
 
     </div>
 
-    <div class="mini-nav">
-      <button class="btn-3">Faça parte</button>
-    </div>
+    
   </section>
 
-  <section class="info" style="background-image: url(assets/img/fundoCell.png);">
+  <section class="info">
 
     <div class="content-info">
       <div class="info-txt">
         <h2>INFORMAÇÕES</h2>
-        <h3 class="txt-caixa">DO SISTEMA</h3>
+        <div>
+          <h2 class="txt-caixa">DO SISTEMA</h2>
+        </div>
 
         <p>
           Um sistema de pedidos fácil e rápido para oferecer para seus clientes.
@@ -147,18 +142,23 @@
   </section>
 
   <section class="m-info">
-    <p>
+    <div class="m-info-position">
+          <p>
       Vantagens de você usar o
       cardápio da SaboresGo em seu negocio.
     </p>
 
-    <h2 class="txt-caixa">SEM CNPJ</h2>
-    <h3 class="txt-caixa3">CARDAPIO + PEDIDOS</h3>
-    <h3 class="txt-caixa4">SEM MENSALIDADES</h3>
-    <h3 class="txt-caixa2">TAXA DE 4,5% + R$ 0.60</h3>
+     <div>
+       <h2 class="txt-caixa">SEM CNPJ</h2>
+      <h3 class="txt-caixa3">CARDAPIO + PEDIDOS</h3>
+      <h3 class="txt-caixa4">SEM MENSALIDADES</h3>
+      <h3 class="txt-caixa2">TAXA DE 4,5% + R$ 0.60</h3>
+     </div>
+
 
 
     <button class="btn-4">Faça Parte</button>
+    </div>
   </section>
 
   <footer class="footer">
@@ -197,17 +197,59 @@
 
 
   <script>
-    const container = document.querySelector('.cards-vantagem');
+    
 
-    container.addEventListener('wheel', (e) => {
-      const isAtTop = container.scrollTop === 0;
-      const isAtBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
+const caixas = document.querySelectorAll('.txt-caixa, .txt-caixa2, .txt-caixa3, .txt-caixa4');
 
-      if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-        e.preventDefault();
-        window.scrollBy(0, e.deltaY); // passa o scroll pra página
-      }
+caixas.forEach(caixa => {
+    
+    // 1 — mede a largura natural
+    const larguraNatural = caixa.offsetWidth + "px";
+
+    // 3 — define o valor final desejado (100% do container)
+    caixa.style.setProperty('--largura-final', "100%");
+
+    // 4 — agora o width inicial é fixo e não muda mais
+    caixa.style.width = larguraNatural;
+});
+
+// OBS: animação ao entrar na tela
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('animar-width');
+            observer.unobserve(e.target);
+        }
     });
+}, { threshold: 0.2 });
+
+caixas.forEach(c => observer.observe(c));
+
+
+document.querySelectorAll(".titulo-animado").forEach((titulo) => {
+    const texto = titulo.textContent;
+    titulo.textContent = "";
+
+    texto.split("").forEach((char, i) => {
+        
+        // Se for espaço, adiciona um nó de texto normal
+        if (char === " ") {
+            titulo.appendChild(document.createTextNode(" "));
+            return;
+        }
+
+        // Letras vão em spans
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.animationDelay = `${i * 0.02}s`;
+        titulo.appendChild(span);
+    });
+});
+
+
+
+
+
 
   </script>
 </body>

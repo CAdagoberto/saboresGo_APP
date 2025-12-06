@@ -1,261 +1,594 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="zxx">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaboresGo | Pagina Inicial</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
+  <title>SaboresGo | Crie seu Cardápio</title>
+  <link rel="icon" href="assets/img/heading-img.png">
+  <!-- CSS only -->
+   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+   <!-- fancybox -->
+   <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <!-- style -->
+   <link rel="stylesheet" href="assets/css/style.css">
+   <!-- responsive -->
+   <link rel="stylesheet" href="assets/css/responsive.css">
 
+   <link rel="stylesheet" href="assets/css/atualizacoes.css">
+   <!-- color -->
+   <link rel="stylesheet" href="assets/css/color.css">
+   <script src="assets/js/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/preloader.js"></script>
+ </head>
 <body>
-
-  <!--Header Inicial-->
-  <section class="header" >
-    <div class="top-nav">
-      <div class="img-logo">
-        <img src="assets/img/logo.png" alt="Logo Cardápio Online">
-      </div>
-      <button class="btn-1">
-        Criar meu cardápio
-      </button>
-    </div>
-
-    <div class="content">
-      <h1>Seu cardápio online em minutos</h1>
-      <div>
-        <h2 class="txt-caixa">Sem mensalidade e sem complicação</h2>
-      </div>
-
-      <div class="text-header">
-        <p>
-          Crie agora o seu cardápio digital completo — receba pedidos, aceite pagamentos online e gerencie tudo em um só lugar.
-          <strong>sem mensalidade</strong>, prático e feito para quem quer vender mais sem depender de aplicativos caros.
-        </p>
-
-        <button class="btn-2">
-          Começar agora
-        </button>
-      </div>
-    </div>
-
-    <div class="imgCll">
-      <img src="assets/img/pizza.png" alt="Imagem ilustrativa de um cardápio digital">
-    </div>
-  </section>
-  <!--Header Inicial-->
-
-  <!-- Mais informações -->
-  <section class="mais-info">
-    <h2 class="titulo-animado">Crie seu cardápio online sem pagar mensalidade.</h2>
-    <div>
-      <h3 class="txt-caixa2">É AQUI!</h3>
-    </div>
-    <h2 class="titulo-animado">Você só paga a taxa padrão do meio de pagamento quando vender.</h2>
-
-    <p>
-      Crie e personalize seu cardápio digital em poucos minutos.
-      Receba pedidos direto do seu site, aceite pagamentos via PIX ou cartão
-      e acompanhe tudo em tempo real — sem taxas escondidas e sem mensalidades.
-    </p>
-
-    <button class="btn-2">saiba mais</button>
-  </section>
-  <!-- Fim Mais informações -->
-
-  <section class="vantagens">
-    <div class="headerVantagem">
-      <h2>Vantagens</h2>
-      <div>
-        <h2 class="txt-caixa4">de usar</h2>
-      </div>
-      <img src="assets/img/logo.png" alt="">
-    </div>
-
-    <div class="cards-vantagem">
-
-
-      <div class="card">
-        <img src="assets/img/cell.png" alt="">
-        <div class="body-card">
-          <span>Texto 1</span>
+<!-- loader -->
+<div class="preloader"> 
+      <div class="loader4"></div>
+</div>
+<!-- loader end -->
+<header class="topnav">
+  <div class="container">
+    <div class="header-bar">
+      <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+        <nav class="navbar">
+          <ul class="navbar-links">
+            <li class="navbar-dropdown has-children">
+              <a href="#">Início</a>
+            
+            </li>
+            <li class="navbar-dropdown">
+                <a href="about.html">Sobre</a>
+            </li>
+            <li class="navbar-dropdown has-children">
+                <a href="#">Taxas</a>
+               
+            </li>
+            <li class="navbar-dropdown has-children">
+                <a href="#">Como funciona</a>
+            </li>
+            <li class="navbar-dropdown">
+                <a href="faqs.html">Contato</a>
+            </li>
+            
+          </ul>
+        </nav>
+        <div class="pickup">
+            <a href="javascript:void(0)" class="btn">Crie seu cardápio</a>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/img/cell.png" alt="">
-        <div class="body-card">
-          <span>Texto 2</span>
+        
+        <div class="bar-menu">
+          <i class="fa-solid fa-bars"></i>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/img/cell.png" alt="">
-        <div class="body-card">
-          <span>Texto 3</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/img/cell.png" alt="">
-        <div class="body-card">
-          <span>Texto 4</span>
-        </div>
-      </div>
-
-      
-
-
-
-
     </div>
+        <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block; background-image: url(assets/img/background.png);">
 
-    
-  </section>
-
-  <section class="info">
-
-    <div class="content-info">
-      <div class="info-txt">
-        <h2>INFORMAÇÕES</h2>
-        <div>
-          <h2 class="txt-caixa">DO SISTEMA</h2>
+        <div class="res-log">
+            <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo">
+            </a>
         </div>
 
-        <p>
-          Um sistema de pedidos fácil e rápido para oferecer para seus clientes.
-        </p>
-      </div>
+        <ul>
 
-      <div class="info-img">
-        <img src="assets/img/sistem.png" alt="">
-        <div class="taxas">
-          <div class="tx-caixa">
-            <p>Taxas <br> Por venda</p>
-            <h4>4.5% + R$ 0.60</h4>
-          </div>
-          <div class="barra"></div>
-          <div class="tx-caixa">
-            <p>Sem <br>taxa de</p>
-            <h4>Mensalidade</h3>
-          </div>
+            <li class="navbar-dropdown has-children">
+              <a href="#">Início</a>
+            
+            </li>
+            <li class="navbar-dropdown">
+                <a href="about.html">Sobre</a>
+            </li>
+            <li class="navbar-dropdown has-children">
+                <a href="#">Taxas</a>
+               
+            </li>
+            <li class="navbar-dropdown has-children">
+                <a href="#">Como funciona</a>
+            </li>
+            <li class="navbar-dropdown">
+                <a href="faqs.html">Contato</a>
+            </li>
+
+        </ul>
+
+        <div class="menu-sidebar-single-widget">
+            <h5 class="menu-sidebar-title">Informações</h5>
+
+            <div class="header-contact-info">
+            <span>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:contato@seusistema.com">contato@seusistema.com</a>
+            </span>
+
+            <span>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+550000000000">(00) 00000-0000</a>
+            </span>
+            </div>
+
+            <div class="social-profile">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="m-info">
-    <div class="m-info-position">
-          <p>
-      Vantagens de você usar o
-      cardápio da SaboresGo em seu negocio.
-    </p>
+        <a href="javascript:void(0)" id="res-cross">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </a>
 
-     <div>
-       <h2 class="txt-caixa">SEM CNPJ</h2>
-      <h3 class="txt-caixa3">CARDAPIO + PEDIDOS</h3>
-      <h3 class="txt-caixa4">SEM MENSALIDADES</h3>
-      <h3 class="txt-caixa2">TAXA DE 4,5% + R$ 0.60</h3>
-     </div>
+        </div>
 
-
-
-    <button class="btn-4">Faça Parte</button>
-    </div>
-  </section>
-
-  <footer class="footer">
-  <div class="footer-container">
-    
-    <!-- Logo e descrição -->
-    <div class="footer-info">
-      <img src="assets/img/logo.png" alt="Logo Saas Cardápio" class="footer-logo">
-      <p>Uma plataforma simples e prática para conectar clientes e vendedores de delivery.</p>
-    </div>
-
-    <!-- Navegação -->
-    <div class="footer-links">
-      <h4>Navegação</h4>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#vantagens">Vantagens</a></li>
-        <li><a href="#info">Informações</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </div>
-
-    <!-- Contato -->
-    <div class="footer-contato">
-      <h4>Contato</h4>
-      <p><i class="fa-solid fa-envelope"></i> contato@saascardapio.com</p>
-      <p><i class="fa-brands fa-whatsapp"></i> (11) 99999-9999</p>
-    </div>
   </div>
+</header>
 
-  <!-- Linha inferior -->
-  <div class="footer-bottom">
-    <p>© 2025 Saas Cardápio — Todos os direitos reservados.</p>
-  </div>
+<section class="hero-section-one">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-one-text">
+                    <h1>Seu cardápio digital com pagamentos integrados</h1>
+                    <h5>Receba pedidos diretamente no WhatsApp e aceite pagamentos online sem mensalidade. Você só paga 4.5% + R$ 0,60 por transação confirmada.</h5>
+                    <div>
+                        <a href="#" class="btn">Criar meu cardápio grátis</a>
+                        <a href="#" class="btn two">Como funciona</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="hero-one-img">
+                    <img src="assets/img/novo/celular.png" alt="hero-one-img">
+                    <div class="shaps-hero"><img src="assets/img/shaps-1.png" alt="dots-shaps" class="shaps-1"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section >
+    <div class="container">
+        <div class="heading">
+            <img src="assets/img/heading-img.png" alt="heading-img">
+            <h6>Soluções completas para o seu negócio</h6>
+            <h2>Funcionalidades que impulsionam o seu restaurante</h2>
+        </div>
+
+        <div class="row services-slider owl-carousel owl-theme">
+
+            <!-- Item 1 -->
+            <div class="col-lg-12 item">
+                <div class="services">
+                    <i>
+                        <!-- Ícone original mantido -->
+                        <svg enable-background="new 0 0 68 68" height="512" viewBox="0 0 68 68" width="512" xmlns="http://www.w3.org/2000/svg"><g id="_x31_06">...</g></svg>
+                    </i>
+                    <a href="#">Sistema de Pedidos Próprio</a>
+                    <p>Receba pedidos diretamente, sem intermediários, com controle total sobre vendas, taxas e clientes.</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-lg-12 item">
+                <div class="services">
+                    <i>
+                        <svg id="Line_Expand" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg">...</svg>
+                    </i>
+                    <a href="#">Gestão Inteligente</a>
+                    <p>Painel completo para acompanhar pedidos, relatórios, taxas, entregas e desempenho do restaurante.</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-lg-12 item">
+                <div class="services">
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Icons" viewBox="0 0 60 60" width="512" height="512">...</svg>
+                    </i>
+                    <a href="#">Taxas Reduzidas</a>
+                    <p>Economize drasticamente com taxas mais baixas, mantendo mais lucro em cada pedido realizado.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 80px 0;">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Imagem -->
+            <div class="col-lg-6">
+                <div class="propel-img">
+                    <img src="assets/img/novo/pedidocell.jpg" alt="Cardápio Digital">
+                </div>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="col-lg-6">
+                <div class="heading two">
+                    <h6>SIMPLES, RÁPIDO E SEM MENSALIDADE</h6>
+                    <h2>Digitalize seu cardápio e receba pedidos com total autonomia</h2>
+                </div>
+
+                <div class="propel-text">
+                    <p>Crie seu cardápio digital, receba pedidos no WhatsApp e aceite pagamentos online sem precisar pagar mensalidade. Você só paga uma taxa por transação confirmada, mantendo o controle total sobre vendas e clientes.</p>
+
+                    <div class="propel">
+                        <div>
+                            <i><img src="assets/img/propel-icon-1.png" alt="propel-icon"></i>
+                        </div>
+                        <div>
+                            <h5>Pedidos diretos e sem intermediários</h5>
+                            <p>Receba pedidos instantaneamente no WhatsApp e gerencie tudo de forma simples e organizada.</p>
+                        </div>
+                    </div>
+
+                    <div class="propel">
+                        <div>
+                            <i><img src="assets/img/propel-icon-2.png" alt="propel-icon"></i>
+                        </div>
+                        <div>
+                            <h5>Pagamento online integrado</h5>
+                            <p>Aceite pagamentos via link ou QR Code com taxa fixa de 4.5% + R$ 0,60 por transação, sem mensalidade ou contratos.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="gap no-bottom projects" style="background-image: url(assets/img/background.png); background-color: #faf9f5;"> 
+    <div class="container">
+        <div class="heading">
+            <img src="assets/img/heading-img.png" alt="heading-img">
+            <h6>Projetos e Parcerias</h6>
+            <h2>Ajudando Restaurantes a Conquistar Presença Digital</h2>
+        </div>
+        <div class="row companie owl-carousel owl-theme">
+            <div class="col-lg-12 item">
+                <div class="projects-style">
+                    <div class="projects-img">
+                        <figure>
+                            <img src="https://placehold.co/400x360" alt="img">
+                        </figure>
+                        
+                    </div>
+                    <h4><a href="#">Cardápio Digital Personalizado</a></h4>
+                    <span>Plataforma — 2024</span>
+                </div>
+            </div>
+
+            <div class="col-lg-12 item">
+                <div class="projects-style">
+                    <div class="projects-img">
+                        <figure>
+                            <img src="https://placehold.co/400x360" alt="img">
+                        </figure>
+                        
+                    </div>
+                    <h4><a href="#">Sistema Próprio de Pedidos Online</a></h4>
+                    <span>Restaurante — 2024</span>
+                </div>
+            </div>
+
+            <div class="col-lg-12 item">
+                <div class="projects-style">
+                    <div class="projects-img">
+                        <figure>
+                            <img src="https://placehold.co/400x360" alt="img">
+                        </figure>
+                        
+                    </div>
+                    <h4><a href="#">Landing Pages Para Restaurantes</a></h4>
+                    <span>Marketing — 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gap section-business">
+        <div class="container">
+            <h3>Sasnio</h3>
+            <div class="row align-items-end">
+                <div class="col-lg-6">
+                    <div class="heading two">
+                        <h2>Impulsionando Negócios do Setor Alimentício</h2>
+                    </div> 
+                    <div class="better-business">
+                        <p>
+                            Nosso foco é oferecer soluções acessíveis para que restaurantes, lanchonetes e 
+                            pequenos empreendedores possam vender online com eficiência e autonomia. 
+                            Desenvolvemos ferramentas que ajudam marcas gastronômicas a aumentar pedidos, 
+                            fortalecer sua identidade e melhorar a relação direta com seus clientes.
+                        </p>
+                        <div class="count-style">
+                            <div class="count-text">
+                                <div class="d-flex justify-content-center">
+                                    <h2>4.5</h2>
+                                    <sup>%</sup>
+                                </div>
+                                <p>Taxa por pedido — uma das mais acessíveis do mercado</p>
+                            </div>
+
+                            <div class="count-text">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="count" data-number="100">100</h2>
+                                    <sup>%</sup>
+                                </div>
+                                <p>Pensado para dar autonomia total ao dono do negócio</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="business-img">
+                        <img class="img-chef" src="assets/img/novo/chefcardapio.jpg" alt="img">
+                        <img src="assets/img/dots-shaps.png" alt="dots-shaps" class="dots-shaps">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="gap no-top accordion-section" style="padding: 80px 0;">
+    <div class="container">
+        <div class="heading two">
+            <h6>Sistema Completo</h6>
+            <h2>Oferecemos Tudo Para Você Vender Online com Autonomia</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="accordion">
+
+                    <div class="accordion-item">
+                        <a href="javascript:void(0)" class="heading">
+                            <div class="icon"></div>
+                            <div class="title">Cardápio Digital Personalizado</div>
+                        </a>
+                        <div class="content">
+                            <p>
+                                Crie e edite seu cardápio em poucos segundos, adicione fotos, preços,
+                                categorias e promoções — tudo com a identidade do seu negócio.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item active">
+                        <a href="javascript:void(0)" class="heading">
+                            <div class="icon"></div>
+                            <div class="title">Pedidos Diretos no WhatsApp</div>
+                        </a>
+                        <div class="content" style="display: block;">
+                            <p>
+                                Receba pedidos instantaneamente no WhatsApp, sem intermediários.
+                                Mais agilidade, controle e comunicação direta com o cliente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <a href="javascript:void(0)" class="heading">
+                            <div class="icon"></div>
+                            <div class="title">Pagamentos Online Integrados</div>
+                        </a>
+                        <div class="content">
+                            <p>
+                                Aceite pagamentos via link ou QR Code com taxa fixa por transação.
+                                Seu cliente paga rápido, e você recebe com segurança.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <a href="javascript:void(0)" class="heading">
+                            <div class="icon"></div>
+                            <div class="title">Painel de Vendas e Pedidos</div>
+                        </a>
+                        <div class="content">
+                            <p>
+                                Acompanhe pedidos, status, histórico e desempenho do seu negócio
+                                em um painel simples e direto — ideal para gestão no dia a dia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <a href="javascript:void(0)" class="heading">
+                            <div class="icon"></div>
+                            <div class="title">Links e QR Codes Inteligentes</div>
+                        </a>
+                        <div class="content">
+                            <p>
+                                Gere links e QR Codes para divulgar seu cardápio em redes sociais,
+                                embalagens, mesas e pontos de venda, aumentando pedidos e visibilidade.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="accordio-img">
+                    <img src="https://placehold.co/565x611" alt="accordio-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="gap blog-section" style="background-image: url(assets/img/background-1.png);">
+    <div class="container">
+
+        <div class="heading">
+            <img src="assets/img/heading-img.png" alt="heading-img">
+            <h6>Dicas e Conteúdos</h6>
+            <h2>Últimos Artigos Para o Seu Negócio</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog img-hover">
+                    <div class="blog-img">
+                        <figure>
+                            <img src="https://placehold.co/360x290" alt="blog">
+                        </figure>
+                    </div>
+                    <h5>23<span>Mai, 2024</span></h5>
+                    <a href="blog-details.html"><h4>Como aumentar pedidos oferecendo um cardápio digital</h4></a>
+                    <h6>por <b>Equipe Sasnio</b></h6>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog img-hover">
+                    <div class="blog-img">
+                        <figure>
+                            <img src="https://placehold.co/360x290" alt="blog">
+                        </figure>
+                    </div>
+                    <h5>17<span>Mai, 2024</span></h5>
+                    <a href="blog-details.html"><h4>Estratégias para vender mais usando pedidos via WhatsApp</h4></a>
+                    <h6>por <b>Equipe Sasnio</b></h6>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog img-hover mb-0">
+                    <div class="blog-img">
+                        <figure>
+                            <img src="https://placehold.co/360x290" alt="blog">
+                        </figure>
+                    </div>
+                    <h5>04<span>Mai, 2024</span></h5>
+                    <a href="blog-details.html"><h4>Pagamentos online: como facilitar a vida do seu cliente</h4></a>
+                    <h6>por <b>Equipe Sasnio</b></h6>
+                </div>
+            </div>
+
+            <div class="button-center">
+                <a href="our-blog.html" class="btn">Ver Todos os Artigos</a>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="assets/img/shaps.png" alt="dots-shaps" class="dots-shaps">
+</section>
+
+<footer style="background-image: url(assets/img/footer.jpg);">
+    <div class="container">
+
+        <!-- Newsletter -->
+        <div class="row align-items-center justify-content-center pb">
+            <div class="col-lg-12">
+                <div class="subscribe-text">
+                    <img src="assets/img/subscribe-icon.png" alt="subscribe-icon">
+                    <div>
+                        <h2>Receba novidades e atualizações</h2>
+                        <p>Fique por dentro das melhorias do nosso sistema.</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="row">
+
+            <!-- Informações -->
+            <div class="col-lg-6">
+                <div class="information">
+                    <span>Fale com a gente</span>
+                    <a href="mailto:contato@cardapiodigital.com">contato@cardapiodigital.com</a>
+
+                    <div class="d-flex">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h6>Atendimento 100% online — Brasil</h6>
+                    </div>
+
+                    <ul class="social-icon">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navegação principal igual ao HEADER -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-links">
+                    <h3>Navegação</h3>
+                    <div class="boder"></div>
+                    <ul>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Tela inicial</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="about.html">Sobre</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Taxas</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Projetos</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="faqs.html">Dúvidas</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Links úteis (coerentes com SaaS) -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-links">
+                    <h3>Links úteis</h3>
+                    <div class="boder"></div>
+                    <ul>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Criar meu cardápio</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Guias e tutoriais</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Política de Privacidade</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Como funciona</a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyrights">
+            <div class="d-flex align-items-center">
+                <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                <div class="boder"></div>
+                <span>Atendimento: <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a></span>
+            </div>
+            <p>© 2025 — Plataforma de Cardápio Digital. Todos os direitos reservados.</p>
+        </div>
+
+    </div>
+
+    <img src="assets/img/dots-shaps.png" alt="dots-shaps" class="dots-shaps">
+    <img src="assets/img/shaps-1.png" alt="dots-shaps" class="shaps-1">
 </footer>
 
+<!-- progress -->
+<div id="progress">
+      <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
+</div>
+<!-- progress end -->
 
-  <script>
-    
-
-const caixas = document.querySelectorAll('.txt-caixa, .txt-caixa2, .txt-caixa3, .txt-caixa4');
-
-caixas.forEach(caixa => {
-    
-    // 1 — mede a largura natural
-    const larguraNatural = caixa.offsetWidth + "px";
-
-    // 3 — define o valor final desejado (100% do container)
-    caixa.style.setProperty('--largura-final', "100%");
-
-    // 4 — agora o width inicial é fixo e não muda mais
-    caixa.style.width = larguraNatural;
-});
-
-// OBS: animação ao entrar na tela
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            e.target.classList.add('animar-width');
-            observer.unobserve(e.target);
-        }
-    });
-}, { threshold: 0.2 });
-
-caixas.forEach(c => observer.observe(c));
-
-
-document.querySelectorAll(".titulo-animado").forEach((titulo) => {
-    const texto = titulo.textContent;
-    titulo.textContent = "";
-
-    texto.split("").forEach((char, i) => {
-        
-        // Se for espaço, adiciona um nó de texto normal
-        if (char === " ") {
-            titulo.appendChild(document.createTextNode(" "));
-            return;
-        }
-
-        // Letras vão em spans
-        const span = document.createElement("span");
-        span.textContent = char;
-        span.style.animationDelay = `${i * 0.02}s`;
-        titulo.appendChild(span);
-    });
-});
-
-
-
-
-
-
-  </script>
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- fancybox -->
+<script src="assets/js/jquery.fancybox.min.js"></script>
+<script src="assets/js/custom.js"></script>
 </body>
-
-</html>

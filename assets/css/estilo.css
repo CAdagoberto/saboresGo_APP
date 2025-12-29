@@ -124,7 +124,7 @@ strong {
 }
 
 .header {
-    min-height: 80vh;
+    min-height: 70vh;
     border-radius: 0 0 30px 30px;
     background: linear-gradient(
         180deg,
@@ -150,13 +150,24 @@ strong {
 
 /*Navbar*/
 .navegacao {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     width: 100%;
     height: 72px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 0 24px;
+
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+
 
 
 .logo-header img {
@@ -834,17 +845,93 @@ strong {
 /*Footer*/
 
 .footer-container {
-    min-height: 60vh;
-    margin-top: 60px;
-    border-radius: 30px 30px 0 0 ;
+    margin-top: 80px;
+    border-radius: 30px 30px 0 0;
     background: linear-gradient(
         45deg,
         var(--cor-grafite) 0%,
         var(--cor-grafite-clara) 100%
-        
     );
 
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 80px 40px 40px;
+    color: white;
 }
+
+/* Header */
+.footer-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-header img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.footer-hcontent {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.footer-hcontent span {
+    display: block;
+    margin-top: 8px;
+    color: #91bbff;
+    font-weight: 500;
+}
+
+/* CTA */
+.cta-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 40px 0;
+}
+
+.cta-footer h2 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    max-width: 520px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 60px 24px 32px;
+        gap: 40px;
+    }
+
+    .footer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cta-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+
+
 
 
 

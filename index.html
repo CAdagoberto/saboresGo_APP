@@ -14,21 +14,32 @@
     <body>
 
         <nav class="container navegacao">
-                    <div class="logo-header">
-                        <img src="assets/img/logoGrafite.png" alt="Logo">
-                    </div>
+            <div class="logo-header">
+                <img src="assets/img/logoGrafite.png" alt="Logo">
+            </div>
 
-                    <ul class="menu">
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Preço</a></li>
-                        <li><a href="#">Beneficios</a></li>
-                    </ul>
+            <!-- Botão menu mobile -->
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                    <div class="header-buttons">
-                        <a href="#" class="btn-1">Acessar Painel</a>
-                    </div>
-                </nav>
+            <!-- Área de navegação -->
+            <div class="nav-actions">
+                <ul class="menu">
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Preço</a></li>
+                    <li><a href="#">Benefícios</a></li>
+                </ul>
+
+                <div class="header-buttons">
+                    <a href="#" class="btn-1">Acessar Painel</a>
+                </div>
+            </div>
+        </nav>
+
 
         <section class="container">
             <div class="header">
@@ -57,8 +68,8 @@
             <article class="artigo">
                 <div class="img-artigo">
                     <div class="imgart">
-                        
-                    </div>
+                        <img src="assets/img/edit/cell1.png" alt="">
+                    </div>  
                 </div>
 
                 <div class="body-artigo">
@@ -99,14 +110,18 @@
                 </div>
 
                 <div class="img-artigo">
-                    <div class="imgart"></div>
+                    <div class="imgart">
+                         <img src="assets/img/edit/cell2.png" alt="">
+                    </div>
                 </div>
             </article>
 
 
             <article class="artigo">
                 <div class="img-artigo">
-                    <div class="imgart"></div>
+                    <div class="imgart">
+                        <img src="assets/img/edit/cell3.png" alt="">
+                    </div>
                 </div>
 
                 <div class="body-artigo">
@@ -146,7 +161,9 @@
                 </div>
 
                 <div class="img-artigo">
-                    <div class="imgart"></div>
+                    <div class="imgart">
+                        <img src="assets/img/edit/cell4.png" alt="">
+                    </div>
                 </div>
             </article>
 
@@ -376,7 +393,16 @@
         </footer>
 
 
-        
+        <script>
+            const toggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu-mobile');
+
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            });
+        </script>
+
         
     </body>
 </html>

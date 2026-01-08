@@ -160,7 +160,7 @@ strong {
     top: 0;
     z-index: 1000;
 
-    width: 1552px;
+    width: 1600px;
     height: 72px;
 
     display: flex;
@@ -416,6 +416,111 @@ strong {
     max-width: 420px;
 }
 
+/*Como funciona*/
+/* Como funciona */
+.como-funciona {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.como-header {
+    max-width: 720px;
+    margin: 0 auto 80px;
+}
+
+.como-header h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        90deg,
+        var(--cor-grafite-escura),
+        #004dcb
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.como-header p {
+    color: #6f6f6f;
+    font-size: 18px;
+}
+
+.como-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.como-step {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px 30px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+
+    text-align: left;
+}
+
+.step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        45deg,
+        var(--cor-principalESC),
+        var(--cor-principal)
+    );
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.como-step h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.como-step p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.como-aviso {
+    margin: 60px auto 40px;
+    max-width: 720px;
+    padding: 20px 24px;
+
+    border-radius: 16px;
+    background: rgba(29, 232, 103, 0.08);
+    border: 1px solid rgba(29, 232, 103, 0.3);
+
+    font-size: 16px;
+}
+
+.como-cta {
+    margin-top: 40px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .como-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .como-header h2 {
+        font-size: 2rem;
+    }
+}
+
+
 /*Artigos*/
 .artigos {
     display: flex;
@@ -496,10 +601,13 @@ strong {
     width: 90%;
     font-size: 18px;
 }
+
+.como-header .nuvem,
 .body-artigo .nuvem {
     margin-bottom: 15px;
 }
 
+.como-header .nuvem span,
 .body-artigo .nuvem span {
     border: 1px solid var(--cor-principalESC);
     color: var(--cor-principalESC);
@@ -881,6 +989,7 @@ strong {
     border: inherit;
 }
 
+
 .card .formulario form textarea {
     resize: vertical;
     min-height: 120px;
@@ -897,6 +1006,11 @@ strong {
 
 /* Mobile */
 @media (max-width: 768px) {
+    
+.image-card .imgart img {
+    width: 350px;
+}
+
     .card {
         padding: 32px 24px;
     }
@@ -953,7 +1067,9 @@ strong {
     margin-top: 40px;
     overflow-x: auto;
     border-radius: 20px;
-    overflow: hidden;
+    overflow-y: hidden;
+   
+
 }
 
 .tabela-beneficios table {

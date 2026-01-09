@@ -31,15 +31,15 @@
             <!-- Área de navegação -->
             <div class="nav-actions">
                 <ul class="menu">
-                    <li><a href="#" class="active">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Preço</a></li>
-                    <li><a href="#">Benefícios</a></li>
+                    <li><a href="#comofunciona">Como funciona</a></li>
+                    <li><a href="#beneficios">Preço & Benefícios</a></li>
+                    <li><a href="#duvidas">Perguntas frequentes</a></li>
                 </ul>
 
                 <div class="header-buttons">
-                    <a href="#" class="btn-1">Acessar Painel</a>
+                    <a href="#" class="btn-1">Criar meu link grátis</a>
                 </div>
+
             </div>
         </nav>
 
@@ -65,7 +65,7 @@
         </section>
         <!-- Header -->
 
-        <section class="container como-funciona">
+        <section class="container como-funciona" id="comofunciona">
             <header class="como-header">
                 <div class="nuvem">
                     <span>Simples de usar</span>
@@ -227,7 +227,7 @@
         <!-- Seção de artigos -->
 
                 <!-- Seção de beneficios -->
-        <section class="container beneficios" data-aos="fade-up">
+        <section class="container beneficios" data-aos="fade-up" id="beneficios">
             <header class="beneficios-header">
                 <p class="subtitulo">
                     <span>Compare e entenda</span>
@@ -365,7 +365,7 @@
         <!-- Seção de beneficios -->
 
         <!-- Seção de faq -->
-        <section class="container faq" data-aos="fade-in">
+        <section class="container faq" data-aos="fade-in" id="duvidas">
             <div class="faqs">
                 <header class="faq-header">
                     <h2>Informações <strong>importantes</strong></h2>
@@ -568,6 +568,22 @@
 
 
         <script>
+             document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const id = this.getAttribute('href');
+                    const target = document.querySelector(id);
+
+                    if (!target) return;
+
+                    e.preventDefault();
+
+                    window.scrollTo({
+                        top: target.offsetTop - 90, // ajuste se tiver header fixo
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
             const toggle = document.querySelector('.menu-toggle');
             const menu = document.querySelector('.menu-mobile');
 
@@ -609,6 +625,7 @@
                 animate();
 
         </script>
+        
 
         
     </body>

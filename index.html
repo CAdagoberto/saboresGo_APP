@@ -658,6 +658,33 @@
 </div>
 
 
+<!-- Modal Sucesso -->
+<div class="success-modal-overlay" id="successModal">
+    <div class="success-modal">
+
+        <button class="success-modal-close" aria-label="Fechar">×</button>
+
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Formulário enviado com sucesso!</h2>
+
+        <p>
+            Recebemos seus dados 🎉  
+            Em breve nossa equipe entrará em contato para
+            te mostrar como vender direto pelo seu link.
+        </p>
+
+        <button class="btn-3" onclick="closeSuccessModal()">
+            Entendi, obrigado
+        </button>
+
+    </div>
+</div>
+
+
+
 
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
@@ -779,6 +806,23 @@
 
             // Exemplo: abrir automaticamente após 5 segundos
             setTimeout(openLeadModal, 2500);
+
+            function openSuccessModal() {
+                successModal.classList.add('active');
+            }
+
+            function closeSuccessModal() {
+                successModal.classList.remove('active');
+            }
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.get('success') === 'true') {
+                openSuccessModal();
+
+                // opcional: limpa a URL depois
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
         </script>
 
 

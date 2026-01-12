@@ -493,13 +493,33 @@
             <div class="card " data-aos="fade-up" data-aos-duration="1700">
                 <div class="formulario">
                     <h3>Envie uma mensagem. Em que podemos lhe ajudar?</h3>
-                    <form action="">
-                        <input type="text" placeholder="Nome">
-                        <input type="email" placeholder="Seu e-mail">
-                        <input type="text" placeholder="Seu telefone">
-                       
+                    <form class="lead-form" action="https://api.sheetmonkey.io/form/9aJFwvUkWDDAwrGBoSWcXJ" method="post">
+                        <input 
+                            name="nome"
+                            type="text" 
+                            placeholder="Nome do estabelecimento" 
+                            required
+                        />
 
-                        <button class="btn-1">Enviar Mensagem</button>
+                        <input 
+                            name="whats"
+                            type="tel" 
+                            placeholder="WhatsApp para contato" 
+                            required
+                        />
+
+                        <input 
+                            name="email"
+                            type="email" 
+                            placeholder="E-mail para contato" 
+                            required
+                        />
+
+                        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+
+                        <button type="submit" class="btn-1">
+                            Quero acesso antecipado
+                        </button>
                     </form>
                 </div>
             </div>
@@ -572,32 +592,39 @@
         <!-- Conteúdo -->
         <div class="lead-modal-content">
             <button class="lead-modal-close" aria-label="Fechar modal">×</button>
-
-            <h2>Estamos preparando algo especial 🚀</h2>
+            <div class="body-artigo">
+                <h2>Estamos preparando algo especial 🚀</h2>
+            </div>
+            
             <p>
                 O LinkaFood está em fase final de desenvolvimento.
                 Cadastre-se para receber acesso antecipado e ser um dos
                 primeiros a vender direto pelo seu próprio link.
             </p>
 
-            <form class="lead-form">
+            <form class="lead-form" action="https://api.sheetmonkey.io/form/9aJFwvUkWDDAwrGBoSWcXJ" method="post">
                 <input 
+                    name="nome"
                     type="text" 
                     placeholder="Nome do estabelecimento" 
                     required
                 >
 
                 <input 
+                    name="whats"
                     type="tel" 
                     placeholder="WhatsApp para contato" 
                     required
                 >
 
                 <input 
+                    name="email"
                     type="email" 
                     placeholder="E-mail para contato" 
                     required
                 >
+
+                <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
 
                 <button type="submit" class="btn-1">
                     Quero acesso antecipado
@@ -705,7 +732,7 @@
             });
 
             // Exemplo: abrir automaticamente após 5 segundos
-            setTimeout(openLeadModal, 5000);
+            setTimeout(openLeadModal, 2500);
         </script>
 
 

@@ -1307,9 +1307,9 @@ strong {
     position: relative;
 }
 
-.lead-modal-content h2 {
+.lead-modal-content .body-artigo h2 {
     font-size: 28px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .lead-modal-content p {

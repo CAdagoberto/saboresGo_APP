@@ -13,8 +13,11 @@
     <script src="https://kit.fontawesome.com/6173e4b356.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
+    
 </head>
     <body>
+
+        
 
         <nav class="container navegacao">
             <div class="logo-header">
@@ -37,7 +40,7 @@
                 </ul>
 
                 <div class="header-buttons">
-                    <a href="#" class="btn-1">Criar meu link grátis</a>
+                    <button onclick="openLeadModal()" class="btn-1">Criar meu link grátis</button>
                 </div>
 
             </div>
@@ -52,7 +55,7 @@
                 <div class="header-content">
                     <div class="header-body" data-aos="fade-left">
                         <h1>Venda direto para seus clientes sem pagar mensalidade</h1>
-                        <a href="" class="btn-1">Começar a vender sem mensalidade</a>
+                        <button onclick="openLeadModal()" class="btn-1">Começar a vender sem mensalidade</button>
                         <p>Cardápio online com pagamento integrado e controle total dos pedidos. Você só paga quando vende.</p>
                     </div>
 
@@ -112,7 +115,7 @@
             </div>
 
             <div class="como-cta">
-                <a href="#" class="btn-3">Criar meu link agora</a>
+                <button onclick="openLeadModal()" class="btn-3">Criar meu link agora</button>
             </div>
         </section>
 
@@ -140,7 +143,7 @@
                         Aqui, o cliente compra pelo seu link e você recebe o pedido direto.
                     </p>
                     <div>
-                        <button class="btn-3">Criar meu link de vendas</button>
+                        <button  onclick="openLeadModal()" class="btn-3">Criar meu link de vendas</button>
                     </div>
                 </div>
             </article>
@@ -160,7 +163,7 @@
                         Tudo organizado para você ganhar tempo no dia a dia.
                     </p>
                     <div>
-                        <button class="btn-3">Ver como funciona</button>
+                        <button  onclick="openLeadModal()" class="btn-3">Ver como funciona</button>
                     </div>
                 </div>
 
@@ -192,7 +195,7 @@
                         Você só paga uma pequena taxa quando realmente fizer vendas.
                     </p>
                     <div>
-                        <button class="btn-3">Ver taxas e valores</button>
+                        <button  onclick="openLeadModal()" class="btn-3">Ver taxas e valores</button>
                     </div>
                 </div>
             </article>
@@ -211,7 +214,7 @@
                         Aqui, o lucro fica com quem realmente vende: você.
                     </p>
                     <div>
-                        <button class="btn-3">Começar a vender agora</button>
+                        <button  onclick="openLeadModal()" class="btn-3">Começar a vender agora</button>
                     </div>
                 </div>
 
@@ -477,7 +480,7 @@
 
                 <div class="faq-cta">
                     <p>Pronto para vender direto e pagar menos taxas?</p>
-                    <button class="btn-2">Criar meu link agora</button>
+                    <button  onclick="openLeadModal()" class="btn-2">Criar meu link agora</button>
                 </div>
             </div>
 
@@ -494,7 +497,7 @@
                         <input type="text" placeholder="Nome">
                         <input type="email" placeholder="Seu e-mail">
                         <input type="text" placeholder="Seu telefone">
-                        <textarea name="" placeholder="Sua mensagem"></textarea>
+                       
 
                         <button class="btn-1">Enviar Mensagem</button>
                     </form>
@@ -515,7 +518,7 @@
                         o cardápio digital, os pedidos e os pagamentos integrados.
                     </p>
 
-                    <button class="btn-2">Falar com um especialista</button>
+                    <button  onclick="openLeadModal()" class="btn-2">Falar com um especialista</button>
                 </div>
             </div>
 
@@ -546,7 +549,7 @@
                     <h2>Quer mais controle e lucro no seu delivery?</h2>
 
                     <div>
-                        <a href="#" class="btn-2">Falar com a LinkaFood</a>
+                        <button onclick="openLeadModal()" class="btn-2">Falar com a LinkaFood</button>
                     </div>
                 </div>
 
@@ -556,6 +559,60 @@
 
             </div>
         </footer>
+
+        <!-- Overlay -->
+<div class="lead-modal-overlay" id="leadModal">
+    <div class="lead-modal">
+        
+        <!-- Imagem -->
+        <div class="lead-modal-image">
+            <img src="assets/img/delivery.JPG" alt="Prévia do LinkaFood">
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="lead-modal-content">
+            <button class="lead-modal-close" aria-label="Fechar modal">×</button>
+
+            <h2>Estamos preparando algo especial 🚀</h2>
+            <p>
+                O LinkaFood está em fase final de desenvolvimento.
+                Cadastre-se para receber acesso antecipado e ser um dos
+                primeiros a vender direto pelo seu próprio link.
+            </p>
+
+            <form class="lead-form">
+                <input 
+                    type="text" 
+                    placeholder="Nome do estabelecimento" 
+                    required
+                >
+
+                <input 
+                    type="tel" 
+                    placeholder="WhatsApp para contato" 
+                    required
+                >
+
+                <input 
+                    type="email" 
+                    placeholder="E-mail para contato" 
+                    required
+                >
+
+                <button type="submit" class="btn-1">
+                    Quero acesso antecipado
+                </button>
+            </form>
+
+            <small>
+                Sem mensalidade • Sem compromisso • Cancelamento livre
+            </small>
+        </div>
+
+    </div>
+</div>
+
+
 
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
@@ -625,6 +682,35 @@
                 animate();
 
         </script>
+
+        <script>
+            const modal = document.getElementById('leadModal');
+            const closeBtn = modal.querySelector('.lead-modal-close');
+
+            function openLeadModal() {
+                modal.classList.add('active');
+            }
+
+            function closeLeadModal() {
+                modal.classList.remove('active');
+            }
+
+            closeBtn.addEventListener('click', closeLeadModal);
+
+            // Fecha ao clicar fora do conteúdo
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeLeadModal();
+                }
+            });
+
+            // Exemplo: abrir automaticamente após 5 segundos
+            setTimeout(openLeadModal, 5000);
+        </script>
+
+
+        
+
         
 
         

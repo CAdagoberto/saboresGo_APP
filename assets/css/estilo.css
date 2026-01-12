@@ -255,6 +255,10 @@ strong {
     gap: 12px;
 }
 
+.menu-mobile {
+    display: none;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
 

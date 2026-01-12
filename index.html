@@ -46,6 +46,24 @@
             </div>
         </nav>
 
+                <!-- Overlay -->
+        <div class="menu-overlay"></div>
+
+        <!-- Menu lateral mobile -->
+        <aside class="menu-mobile">
+            <ul class="menu-mobile-list">
+                <li><a href="#comofunciona">Como funciona</a></li>
+                <li><a href="#beneficios">Preço & Benefícios</a></li>
+                <li><a href="#duvidas">Perguntas frequentes</a></li>
+            </ul>
+
+            <div class="menu-mobile-cta">
+                <button onclick="openLeadModal()" class="btn-1">
+                    Criar meu link grátis
+                </button>
+            </div>
+        </aside>
+
         <!-- Header -->
         <section class="container">
             <div class="header">
@@ -668,13 +686,41 @@
                 });
             });
             
-            const toggle = document.querySelector('.menu-toggle');
+           const toggle = document.querySelector('.menu-toggle');
             const menu = document.querySelector('.menu-mobile');
+            const overlay = document.querySelector('.menu-overlay');
+            const body = document.body;
+
+            function openMenu() {
+                toggle.classList.add('active');
+                menu.classList.add('active');
+                overlay.classList.add('active');
+                body.classList.add('menu-open');
+            }
+
+            function closeMenu() {
+                toggle.classList.remove('active');
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
 
             toggle.addEventListener('click', () => {
-                toggle.classList.toggle('active');
-                menu.classList.toggle('active');
+                if (menu.classList.contains('active')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
             });
+
+            overlay.addEventListener('click', closeMenu);
+
+            // Fecha ao clicar em um link do menu
+            document.querySelectorAll('.menu-mobile a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+
 
               const floatItems = document.querySelectorAll('.float-item img');
 
